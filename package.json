@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "webpack-dev-server --hot --history-api-fallback --inline --content-base ./dist --config ./webpack/dev.config.js",
-    "deploy": "webpack -p --config ./webpack/deploy.config.js"
+    "build": "rm -rf ./dist && webpack -p --config ./webpack/build.config.js"
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
