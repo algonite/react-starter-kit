@@ -12,6 +12,7 @@
     "babel-preset-react": "^6.22.0",
     "babel-preset-stage-0": "^6.22.0",
     "css-loader": "^0.26.1",
+    "dotenv": "^4.0.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.10.0",
     "hacksaw": "^0.3.0",
@@ -27,5 +28,9 @@
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2",
     "webpack-notifier": "^1.5.0"
-  }
+  },
+  "environmentVariables": [
+    "API_URL",
+    "NODE_ENV"
+  ]
 }

@@ -1,5 +1,13 @@
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+// set browser environment variables
+require('dotenv').config();
+const environmentVariables = {};
+require('./package.json').environmentVariables.forEach(name => {
+  environmentVariables[name] = process.env[name];
+});
 
 module.exports = {
   entry: {
@@ -51,6 +59,9 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('bundle.css'),
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(environmentVariables)
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.ejs'
     })
