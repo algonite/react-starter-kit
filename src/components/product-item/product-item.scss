@@ -1,0 +1,11 @@
+@import '~$variables';
+
+.root {
+  background: $light-background;
+  padding: 20px;
+  border: 1px solid #ccc;
+
+  .product-name {
+    font-weight: bold;
+  }
+}

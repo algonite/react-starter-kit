@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { Form } from './partials';
-import { ProductItem } from '../../components';
+import { ProductItem } from '$components';
 
 export default class HomePage extends Component {
   submit() {}
